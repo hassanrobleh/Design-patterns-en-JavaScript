@@ -6,7 +6,7 @@ class App {
 
     async main() {
         const movies = await this.moviesApi.getMovies()
-
+        // console.log(movies)
         movies.forEach(movie => {
             const Template = new MovieCard(movie)
             this.$moviesWrapper.appendChild(Template.createMovieCard())        
