@@ -7,7 +7,7 @@ class Api {
         this._url = url
     }
 
-    async get() {
+    get() {
         return fetch(this._url)
             .then(res => res.json())
             .then(res => res.data)
