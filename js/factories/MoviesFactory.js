@@ -1,7 +1,7 @@
 
 class MoviesFactory {
 
-    constructor(type, data) {
+    constructor(data, type) {
         // Si le type correspond à l'ancienne API, alors retourne-moi l'ancien formatage
         if(type === 'oldApi') {
             return new OldMovie(data)
