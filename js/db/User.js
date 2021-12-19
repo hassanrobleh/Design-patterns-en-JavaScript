@@ -12,7 +12,7 @@ class User {
             this._lastName = data.lastName
 
             // Je les sauvegarde en Local Storage
-            this.saveToLocalStorage
+            this.saveToLocalStorage()
 
              // Je "lock" l'objet
             User.instance = this

@@ -17,7 +17,7 @@ class OldMovie {
     }
 
     get thumbnail() {
-        return `/assets/thumbnails.${this.picture}`
+        return `/assets/thumbnails/${this._picture}`
     }
     get released_in() {
         return this._released_in

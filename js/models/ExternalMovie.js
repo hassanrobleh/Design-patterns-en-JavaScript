@@ -19,7 +19,7 @@ class ExternalMovie {
     }
 
     get thumbnail() {
-        return `/assets/thumbnails.${this._medias.picture}`
+        return `/assets/thumbnails/${this._medias.picture}`
     }
 
     get released_in() {
