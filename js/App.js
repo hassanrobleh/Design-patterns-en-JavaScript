@@ -18,20 +18,23 @@ class App {
         const externalMoviesData = await this.externalMoviesApi.getMovies()
         // console.log(externalMoviesData)
 
-        const ModalForm = new Form()
-        ModalForm.render()
-
         // const oldMovies =  oldMoviesData.map(movie => new MoviesFactory(movie, 'oldApi'))
         const newMovies =  newMoviesData.map(movie => new MoviesFactory(movie, 'newApi'))
         const externalMovies = externalMoviesData.map(movie => new MoviesFactory(movie, 'externalApi'))
 
-        const FullMovies = externalMovies.concat(newMovies)
+        const FullMovies = newMovies.concat(externalMovies)
 
-       
+        const ModalForm = new Form()
+        ModalForm.render()
+
+        const Filter = new FilterForm(FullMovies)
+        Filter.render()
 
         FullMovies.forEach(movie => {
             const Template = new MovieCard(movie)
-            this.$moviesWrapper.appendChild(Template.createMovieCard())        
+            this.$moviesWrapper.appendChild(
+                Template.createMovieCard()
+            )        
         })    
     }
 }
