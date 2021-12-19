@@ -1,11 +1,16 @@
 
 class ExternalMovie {
     constructor(data) {
+        this._actor = "sylvester"
         this._title_fr = data.title_fr
         this._title_en = data.title_en
         this._synopsis = data.synopsis
         this._medias = data.medias
         this._infos = data.infos
+    }
+
+    get actor() {
+        return this._actor
     }
 
     get duration() {
