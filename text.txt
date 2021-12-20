@@ -1,0 +1,5 @@
+
+
+I) Decorator patterns
+
+Il faut absolument retourner l'objet modifier quand on fait un Decorator
