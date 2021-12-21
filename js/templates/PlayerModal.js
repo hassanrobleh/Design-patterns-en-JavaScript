@@ -1,5 +1,5 @@
-class PlayerModal {
 
+class PlayerModal {
     constructor(movie) {
         this.movie = movie
 
@@ -21,9 +21,9 @@ class PlayerModal {
     createPlayer() {
         const player = `
             <div class="player">
-                <iframe
-                    height="600"
-                    width="800"
+                <iframe 
+                    height="600" 
+                    width="800" 
                     src=${this.movie.trailer}
                 ></iframe>
                 <button class="close-btn">Fermer la fenêtre<button>
@@ -31,6 +31,7 @@ class PlayerModal {
         `
 
         this.$wrapper.innerHTML = player
+
         this.$modalWrapper.classList.add('modal-on')
         this.$modalWrapper.appendChild(this.$wrapper)
 
@@ -40,7 +41,4 @@ class PlayerModal {
     render() {
         this.createPlayer()
     }
-
-    
-
 }

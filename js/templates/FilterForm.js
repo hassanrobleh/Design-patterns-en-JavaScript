@@ -14,7 +14,7 @@ class FilterForm {
         // const FilterLib = new FilterV1(this.Movies, actor)
         // const FilteredMovies = await FilterLib.filterByActor()
 
-        AdaptedFilterLib = new FilterMoviesAdapter(this.Movies, actor)
+        const AdaptedFilterLib = new FilterMoviesAdapter(this.Movies, actor)
         const FilteredMovies = await AdaptedFilterLib.filterByActor()
 
         FilteredMovies.forEach(Movie => {

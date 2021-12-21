@@ -1,12 +1,12 @@
-
 class ExternalMovie {
     constructor(data) {
         this._actor = "sylvester"
-        this._title_fr = data.title_fr
-        this._title_en = data.title_en
-        this._synopsis = data.synopsis
-        this._medias = data.medias
         this._infos = data.infos
+        this._medias = data.medias
+        this._synopsis = data.synopsis
+        this._title_en = data.title_en
+        this._title_fr = data.title_fr
+        this._trailer = data.trailer_id
     }
 
     get actor() {
@@ -14,9 +14,7 @@ class ExternalMovie {
     }
 
     get duration() {
-        // const hours = Math.floor(this._duration / 60)
-        // const minutes = this._duration % 60
-        return `${this._infos.duration}`
+        return this._infos.duration
     }
 
     get picture() {
@@ -24,33 +22,22 @@ class ExternalMovie {
     }
 
     get thumbnail() {
-        return `/assets/thumbnails/${this._medias.picture}`
+        return `/assets/thumbnails/${this._medias.thumbnail}`
     }
 
     get released_in() {
         return this._infos.released_in
     }
 
-    // get title_fr() {
-        // return this._title.hasOwnProperty('fr') ? this._title['fr'] : this._title['en']
-    //     return this._title_fr
-    // }
-
-    get title() {
-        return this._title_fr ? this._title_fr : this._title_en
-    }
-    
     get synopsis() {
         return this._synopsis
     }
 
-    // get media() {
-    //     return this._media.hasOwnProperty('picture') ? this._media['picture'] : this._media['thumbnail']
-    // }
+    get title() {
+        return this._title_fr ? this._title_fr : this._title_en
+    }
 
-    // get infos() {
-    //     return this._infos.hasOwnProperty('duration') ? this._infos['duration'] : this._infos['released_in']
-    // }
-
-    
+    get trailer() {
+        return `https://www.youtube.com/embed/${this._trailer}`
+    }
 }
