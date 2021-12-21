@@ -26,7 +26,7 @@ class App {
         FullMovies.forEach(movie => {
             // const Template = new MovieCard(movie)
             const Template = movieCardWithPlayer(new MovieCard(movie))
-            // console.log(Template)
+            console.log(Template)
             this.$moviesWrapper.appendChild(
                 Template.createMovieCard()
             )
