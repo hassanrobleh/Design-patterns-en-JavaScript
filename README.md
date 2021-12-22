@@ -1,1 +1,1 @@
-# Utilisez des design patterns en 
+# Utilisez des design patterns en JavaScript
