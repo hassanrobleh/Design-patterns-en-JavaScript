@@ -102,6 +102,16 @@ body {
     border-color: #eee;
 }
 
+.forms-wrapper {
+    display: flex;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+
 /* Filter Form */
 .filter-form-wrapper {
     width: 90%;

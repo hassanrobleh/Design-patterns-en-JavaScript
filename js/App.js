@@ -17,16 +17,19 @@ class App {
         const FullMovies = Movies.concat(ExternalMovies)
 
 
-        const ModalForm = new FormModal()
-        ModalForm.render()
+        const Form = new FormModal()
+        Form.render()
 
         const Filter = new FilterForm(FullMovies)
         Filter.render()
+
+        const Sorter = new SorterForm(FullMovies)
+        Sorter.render()
         
         FullMovies.forEach(movie => {
             // const Template = new MovieCard(movie)
             const Template = movieCardWithPlayer(new MovieCard(movie))
-            console.log(Template)
+            // console.log(Template)
             this.$moviesWrapper.appendChild(
                 Template.createMovieCard()
             )
