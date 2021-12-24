@@ -1,18 +1,18 @@
 class WishlistSubject {
 
     constructor() {
-        this._obsrevers = []
+        this._observers = []
     }
 
     subscribe(observer) {
-        this._obsrevers.push(observer)
+        this._observers.push(observer)
     }
 
     unsubscribe(observer) {
-        this._obsrevers = this._obsrevers.filter(obs => obs !== observer)
+        this._observers = this._observers.filter(obs => obs !== observer)
     }
 
-    fire() {
-        this._obsrevers.forEach(oberser => observer.add)
+    fire(action) {
+        this._observers.forEach(observer => observer.update(action))
     }
 }
