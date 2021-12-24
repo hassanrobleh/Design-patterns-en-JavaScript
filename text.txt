@@ -3,3 +3,45 @@
 I) Decorator patterns
 
 Il faut absolument retourner l'objet modifier quand on fait un Decorator
+
+II) Observer patterns
+En fait, la méthode   addEventListener  est un Observer Pattern : vous allez écouter un objet et une fois que 
+cet objet change d’état, par exemple au moment de remplir un formulaire, vous allez pouvoir déclencher un bout de code,
+le plus souvent via une fonction callback.
+
+Un Observer Pattern est composé des acteurs suivants :
+
+Vous avez le Sujet. Ce dernier maintient la liste des observateurs. Il permet à des observateurs de s’abonner ou 
+de se désabonner. Une fois que l’état du sujet change, grâce à ce système d’abonnement, 
+les observateurs vont être notifiés que l’état du sujet a changé.
+
+Puis, vous avez le ou les Observers. Lorsqu’ils vont être notifiés d’un changement d’état du sujet, 
+Ils vont pouvoir déclencher un script. Dans notre cas, ce sera la modification du compteur d’envies. 
+Ici, il est important de voir qu’il peut y avoir plusieurs observateurs différents pour un même sujet.
+
+Mais est-ce que ces Observateurs peuvent être le même type d’objets, ou est-ce qu’ils réalisent la même fonctionnalité, 
+par exemple, afficher du texte ?
+
+Non, et c’est tout l’intérêt !
+
+Dans le cadre de notre application, nous allons nous servir de ce pattern pour augmenter un compteur d’envies. 
+Cela dit, on pourrait aller beaucoup plus loin. On pourrait, par exemple, avoir :
+Un Observer qui se chargerait de faire un call API pour enregistrer l'œuvre mise en envie en base de données ;
+Un autre Observer qui se chargerait d’envoyer un e-mail à l’utilisateur pour lui dire qu’il vient de mettre un film 
+en envie ;
+Et enfin, un dernier Observer qui se chargerait de vérifier si l'œuvre est bien disponible sur Netflix.
+
+En fait, quand on parle d’Observers, on dit souvent qu’ils permettent de “découpler” une architecture 
+(ou une infrastructure). Plutôt que de faire grossir un objet en lui ajoutant une nouvelle fonctionnalité, 
+en utilisant un Decorator par exemple, on va plutôt créer des objets qui vont communiquer entre eux : 
+on aurait donc plein de “petits” objets qui feront des tâches spécifiques.
+
+===== Important =======
+Si vous avez déjà travaillé sur un projet Symfony ou Python avec SQLAlchemy, vous avez déjà utilisé des Observers. 
+Les méthodes   persist  et   flush  de l’Entity Manager de Symfony sont des Observers, tout comme   session.add  et   
+session.commit  avec SQLAlchemy.
+De la même façon, si vous avez déjà travaillé avec Angular, vous vous êtes déjà sûrement servi de RxJS : 
+cette librairie permettant de faire des appels API est basée sur les Observers.
+
+Cela dit, attention, l’Observer Pattern n’est pas tout le temps simple à mettre en place, et demande un peu de pratique. 
+Je vous invite à être d’abord à l’aise avec d’autres patterns avant d’essayer d’implémenter celui-là.

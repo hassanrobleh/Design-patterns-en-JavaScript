@@ -5,6 +5,7 @@ class App {
         
         this.moviesApi = new MovieApi('/data/new-movie-data.json')
         this.externalMoviesApi = new MovieApi('/data/external-movie-data.json')
+
     }
 
     async main() {
@@ -34,8 +35,13 @@ class App {
                 Template.createMovieCard()
             )
         })
+
+        
     }
+
+   
 }
 
 const app = new App()
 app.main()
+
