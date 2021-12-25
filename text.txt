@@ -45,3 +45,14 @@ cette librairie permettant de faire des appels API est basée sur les Observers.
 
 Cela dit, attention, l’Observer Pattern n’est pas tout le temps simple à mettre en place, et demande un peu de pratique. 
 Je vous invite à être d’abord à l’aise avec d’autres patterns avant d’essayer d’implémenter celui-là.
+
+III) Gérez l'etat de votre application avec le state pattern
+
+Le principe de responsabilité unique fait partie des principes SOLID. Il précise que chaque module, objet ou fonction ne devrait être responsable que d’une partie du programme, par exemple l’affichage d’un template, le dialogue avec des API ou la gestion du cache. On parle un peu moins des principes SOLID en JavaScript, mais si vous souhaitez aller plus loin sur le sujet, vous pouvez regarder le cours "Créez une application web en PHP de qualité professionnelle".
+
+Aujourd’hui, notre objet   ModalForm  :
+
+S’occupe d’une part d’afficher le formulaire de connexion ainsi que de la partie soumission du formulaire. C’est assez normal, c’est son job, après tout ; :) 
+S’occupe de vérifier si un utilisateur existe, grâce à la méthode   shouldDisplayForm  , et d’instancier un nouvel utilisateur, grâce à la méthode   onSubmitForm  . Nous allons nous occuper de sortir cette logique dans un objet associé.
+
+Si vous travaillez avec React, il est possible que vous utilisiez Redux : Redux est ce qu’on appelle un State Manager. Il permet de gérer l’état d’une application. Autrement dit, grâce à Redux, vous allez pouvoir suivre l’état de votre application précisément.
