@@ -40,6 +40,9 @@ class App {
 
         const Sorter = new SorterForm(this.FullMovies)
         Sorter.render()
+
+        const Search = new SearchForm(this.FullMovies)
+        Search.render()
         
         this.FullMovies.forEach(movie => {
             // const Template = new MovieCard(movie)

@@ -69,3 +69,7 @@ En pratique, ces deux algorithmes seront assez similaires dans leur comportement
 2) Parcourir l’ensemble des films et les filtrer par rapport à notre type de recherche. Autrement dit, soit par acteur, soit par titre de film.
 3)Retourner ce résultat pour pouvoir ensuite l’afficher.
 
+En résumé
+- Le Template Pattern permet de faciliter la création de plusieurs algorithmes ayant une structure similaire mais des implémentations différentes.
+- L’objet Template, ici dans notre projet fil rouge   Search  , va se rapprocher d’une classe abstraite. Autrement dit, son rôle sera d’être hérité par d’autres objets.
+
