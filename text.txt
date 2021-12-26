@@ -57,3 +57,15 @@ S’occupe de vérifier si un utilisateur existe, grâce à la méthode   should
 Si vous travaillez avec React, il est possible que vous utilisiez Redux : Redux est ce qu’on appelle un State Manager. Il permet de gérer l’état d’une application. Autrement dit, grâce à Redux, vous allez pouvoir suivre l’état de votre application précisément.
 
 Le principe d’un State Pattern est de gérer facilement les changements d’état d’une application. Par exemple, lorsque que vous réalisez des traitements asynchrones en JavaScript, vos promesses peuvent avoir trois états :   pending  ,   fulfilled  et   rejected  ou, en français, en cours de traitement, résolue et rejetée
+
+
+IV) template Pattern
+I) Definissez le squellete d'un algorithme avec template Pattern
+II) utilisez un template pattern pour mettre en place une recherche
+Pour réaliser cette fonctionnalité, nous allons donc devoir réaliser deux algorithmes de tri différents : le premier se fait sur le nom des films et le deuxième sur le nom des acteurs.
+
+En pratique, ces deux algorithmes seront assez similaires dans leur comportement. Nous allons :
+1) Écrire du texte dans un champ de recherche.
+2) Parcourir l’ensemble des films et les filtrer par rapport à notre type de recherche. Autrement dit, soit par acteur, soit par titre de film.
+3)Retourner ce résultat pour pouvoir ensuite l’afficher.
+
