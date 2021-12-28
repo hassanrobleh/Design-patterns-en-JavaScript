@@ -105,4 +105,4 @@ dist
 
 # Mac OS
 .DS_STORE
-.txt
+*.txt
