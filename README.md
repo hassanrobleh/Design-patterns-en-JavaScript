@@ -2,8 +2,7 @@
 
 # Getting Started
 ```bash
-$ git clone https://github.com/hassanrobleh/Design-Pattern-Abstract-Factory.git
-$ cd Design-Pattern-Abstract-Factory
-$ npm install
-$ npm run test
+$ git clone https://github.com/hassanrobleh/Design-patterns-en-JavaScript.git
+$ cd Design-patterns-en-JavaScript
+$ Lancer le projet avec LiveServer
 ```
