@@ -105,5 +105,4 @@ dist
 
 # Mac OS
 .DS_STORE
-
-text.txt
+.txt
